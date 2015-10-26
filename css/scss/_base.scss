@@ -1,0 +1,32 @@
+// Base Grid
+// =====================
+.container {
+	@include outer-container;
+	padding: 0 5%;
+}
+
+//Resets
+//========================================
+body, html {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	color: #fff;
+	font-size: 100%;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul,li {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+a {
+	color: #1773e2;
+}

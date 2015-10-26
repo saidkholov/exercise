@@ -1,0 +1,20 @@
+// Base sass file that is being watched
+
+// Author: Said Kholov
+// Email: skholov2@gmail.com
+// ==========================================================
+
+
+//Import third party libraries
+//=====================================
+@import "bourbon/bourbon";
+
+
+// Import common styles
+//========================================
+
+@import "grid-settings";
+@import "neat/neat";
+
+@import "variables";
+@import "base";
