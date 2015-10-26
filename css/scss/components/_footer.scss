@@ -1,0 +1,66 @@
+// Footers
+// ========================
+footer.join-us {
+	background: #000;
+	padding: 5px;
+	text-align: center;
+	h3 {
+		color: #5f5f5f;
+		font-size: em(17px);
+		font-weight: normal;
+		a {
+			display: inline-block;
+		}
+		span {
+			color: #fff;
+		}
+	}
+}
+
+footer.main-footer {
+	padding: 10px 0;
+	h4, p {
+		margin: 0px;
+	}
+	a {
+		color: #000;
+	}
+	font-size: em(12px);
+	background: #cccccc;
+	color: #000;
+	.about {
+		@include span-columns(4);
+	}
+	.faq {
+		@include span-columns(4);
+	}
+	.footer-navigation {
+		font-weight: bold;
+		@include span-columns(2);
+	}
+	.footer-links {
+		@include span-columns(2);
+	}
+}
+
+// Mobile
+// ===============================
+@include media($mobile) {
+	footer.main-footer {
+		
+		.about {
+			@include span-columns(12);
+			margin-bottom:10px;
+		}
+		.faq {
+			@include span-columns(5);
+		}
+		
+		.footer-navigation {
+			@include span-columns(3);
+		}
+		.footer-links {
+			@include span-columns(4);
+		}
+	}
+}

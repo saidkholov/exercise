@@ -3,7 +3,16 @@ section.about {
 		display: block;
 		overflow: hidden;
 		.block {
-			&.quote a{
+			position: relative;
+			width: 25%;
+			float: left;
+			@include border-width(1px 0 1px 1px);
+			border-style: solid;
+			border-color: #e6e6e6;
+			
+			min-height: 240px;
+			text-align: center;
+			&.quote a {
 				&:before {
 					@include fa-icon();
 					content: $fa-var-quote-left;
@@ -23,7 +32,9 @@ section.about {
 					font-size: 30px;
 				}
 			}
-			position: relative;
+			&:nth-of-type(4){
+				border-right: 1px solid #e6e6e6;
+			}
 			a {
 				text-decoration: none;
 				color: #5f5f5f;
@@ -33,13 +44,7 @@ section.about {
 					background: darken(#fff, 15%);
 				}
 			}
-			@include span-columns(3, block-collapse);
-			@include border-width(1px 0 1px 1px);
-			border-style: solid;
-			border-color: #e6e6e6;
 			
-			min-height: 240px;
-			text-align: center;
 			.title {
 				padding-top: 10px;
 				width: 100%;
@@ -63,13 +68,10 @@ section.about {
 					line-height: 60px;
 				}
 			}
-			&:nth-of-type(4){
-				border-right: 1px solid #e6e6e6;
-			}
+			
 		}
 	}
 	.block-divider {
-		color: #5f5f5f;
 		text-align: center;
 		font-size: em(30);
 		line-height: 50px;
@@ -82,6 +84,34 @@ section.about {
 		.qa-btn-container {
 			span {
 				font-size: em(23px);
+			}
+		}
+	}
+}
+
+// tablet down
+@include media($tablet-down) {
+	section.about {
+		ul {
+			.block {
+				width: 50%;
+				float: left;
+				&:nth-of-type(2n){
+					border-right: 1px solid #e6e6e6;
+				}
+			}
+		}
+	}
+}
+
+// Mobile small
+@include media($mobile-small) {
+	section.about {
+		ul {
+			.block {
+				width: 100%;
+				float: left;
+				border-right: 1px solid #e6e6e6;
 			}
 		}
 	}
