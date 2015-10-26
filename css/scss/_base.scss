@@ -10,14 +10,13 @@
 }
 
 // Grid helpers
-
-.hide-tablet-up {
-	@include media($tablet-up) {
+.hide-tablet-down {
+	@include media($tablet-down) {
 		display: none !important;
 	}
 }
-.hide-tablet-down {
-	@include media($tablet-down) {
+.mobile-up-hidden {
+	@include media($mobile-up) {
 		display: none !important;
 	}
 }

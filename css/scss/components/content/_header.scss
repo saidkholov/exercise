@@ -74,20 +74,18 @@ header.content-header {
 
 // Tablet-down
 @include media($tablet-down) {
-	section.content {
-		header.content-header {
-			.profile-image {
+	header.content-header {
+		.profile-image {
 
+		}
+		.profile-info {
+			.basic-info {
+				@include span-columns(12);
+				margin-bottom: 10px;
 			}
-			.profile-info {
-				.basic-info {
-					@include span-columns(12);
-					margin-bottom: 10px;
-				}
-				.profile-actions {
-					@include span-columns(12);
-					text-align: left;
-				}
+			.profile-actions {
+				@include span-columns(12);
+				text-align: left;
 			}
 		}
 	}
@@ -96,18 +94,16 @@ header.content-header {
 
 // Mobile
 @include media($mobile) {
-	section.content {
-		header.content-header {
-			.profile-image {
-				@include span-columns(12);
-				a {
-					padding: 40px 0;
-					display: block;
-				}
+	header.content-header {
+		.profile-image {
+			@include span-columns(12);
+			a {
+				padding: 40px 0;
+				display: block;
 			}
-			.profile-info {
-				@include span-columns(12);
-			}
+		}
+		.profile-info {
+			@include span-columns(12);
 		}
 	}
 }
