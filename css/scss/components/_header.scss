@@ -1,0 +1,63 @@
+// Header section
+// ==============================
+header.site-header {
+	padding: 10px 0;
+	background: {
+		color: #000;
+	}
+	section.top {
+		display: table;
+		width: 100%;
+		margin-bottom: 10px;
+		.logo {
+			display: table;
+			a {
+				display: inline-block;
+				text-decoration: none;
+				margin-right: 10px;
+			}
+			.headline {
+				display: table-cell;
+				vertical-align: middle;
+				color: $light-gray;
+				font-size: em(18);
+			}
+		}
+		.cta {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: right;
+			span {
+				color: $lighter-gray;
+				margin-right: 10px;
+			}
+			.login-button {
+				margin-left: 12px;
+			}
+		}
+	}
+	
+	section.bottom {
+		// Navigation
+		nav.navigation {
+			@include span-columns(8);
+			ul {
+				li {
+					display: inline-block;
+					a {
+						color: #fff;
+						padding-right: 10px;
+					}
+				}
+			}
+		}
+		.phone {
+			@include span-columns(4);
+			text-align: right;
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+

@@ -4,6 +4,10 @@
 // Email: skholov2@gmail.com
 // ==========================================================
 
+// Import fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
+@import 'font-awesome/font-awesome';
 
 //Import third party libraries
 //=====================================
@@ -18,3 +22,9 @@
 
 @import "variables";
 @import "base";
+@import "buttons";
+// Import Componenets
+// =======================================
+
+@import "components/header";
+@import "components/content";

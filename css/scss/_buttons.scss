@@ -1,0 +1,49 @@
+// Buttons
+// ==============================
+$border-radius: 4px;
+
+%button {
+	&:hover, &:focus, &:visited, &:link {
+		text-decoration: none;
+	}
+	padding: 5px 10px; 	
+}
+
+
+.white-button {
+	@extend %button;
+	background: #fff;
+	color: #000;
+	&:hover {
+		background: darken(#fff, 15%);
+	}
+	border-radius: $border-radius;
+}
+
+.gray-button {
+	@extend %button;
+	background: $gray;
+	color: #fff;
+	&:hover {
+		background: darken($gray, 15%);
+	}
+	border-radius: $border-radius;
+}
+
+.primary-button {
+	@extend %button;
+	color: #fff;
+	background: #000;
+	&:hover {
+		background: lighten(#000, 15%);
+	}
+	border-radius: 20px;
+}
+
+.disabled {
+	background: #b8b8b8;
+	cursor: default;
+	&:hover {
+		background: #b8b8b8;
+	}
+}

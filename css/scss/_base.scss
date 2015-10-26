@@ -1,9 +1,28 @@
-// Base Grid
-// =====================
+// Base/common stylings
+// ==========================================
+
 .container {
 	@include outer-container;
 	padding: 0 5%;
 }
+.row {
+	@include row();
+}
+
+// Grid helpers
+
+.hide-tablet-up {
+	@include media($tablet-up) {
+		display: none !important;
+	}
+}
+.hide-tablet-down {
+	@include media($tablet-down) {
+		display: none !important;
+	}
+}
+
+
 
 //Resets
 //========================================
@@ -12,7 +31,14 @@ body, html {
 	margin: 0px;
 	padding: 0px;
 	color: #fff;
-	font-size: 100%;
+	font : {
+		size: 100%;
+		family: 'Open Sans', Arial, sans-serif;
+	}
+}
+
+header, section {
+	font-size: em(14);
 }
 
 
@@ -28,5 +54,11 @@ ul,li {
 }
 
 a {
-	color: #1773e2;
+	text-decoration: none;
+	&:visited, &:active, &:link {
+		text-decoration: none;
+	}
+	&:hover {
+		text-decoration: underline;
+	}
 }
