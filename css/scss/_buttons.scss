@@ -30,6 +30,10 @@ $border-radius: 4px;
 	border-radius: $border-radius;
 }
 
+.rounded-corners {
+	border-radius: 20px;
+}
+
 .primary-button {
 	@extend %button;
 	color: #fff;
@@ -37,7 +41,7 @@ $border-radius: 4px;
 	&:hover {
 		background: lighten(#000, 15%);
 	}
-	border-radius: 20px;
+	@extend .rounded-corners;
 }
 
 .disabled {
