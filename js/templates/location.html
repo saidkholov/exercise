@@ -1,0 +1,13 @@
+<div class="editable">
+	<a ng-show="!edit && !location" ng-click="toggleEdit(true)" href="#">Add location</a>
+	<p class="output" ng-show="!edit" ng-click="toggleEdit(true)">{{location}}</p>
+	<div class="input" ng-show="edit" >
+		<input ng-change="getAddress()" ng-model="location" type="text" ng-model="name" autofocus />
+		<div ng-show="predictions" class="predictions">
+			<ul>
+				<li ng-repeat="prediction in predictions"><a ng-click="selectPrediction(prediction.description)" href="#">{{prediction.description}}</a></li>
+			</ul>
+		</div>
+		<a class="confirm" ng-click="toggleEdit(false)" href="#"><i class="fa fa-check-circle"></i></a>
+	</div>
+</div>

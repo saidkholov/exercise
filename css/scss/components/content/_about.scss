@@ -9,9 +9,16 @@ section.about {
 			@include border-width(1px 0 1px 1px);
 			border-style: solid;
 			border-color: #e6e6e6;
-			
 			min-height: 240px;
 			text-align: center;
+			.location {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				padding: 10px;
+				color: #fff;
+				background: rgba(0,0,0,0.8)
+			}
 			&.quote a {
 				&:before {
 					@include fa-icon();

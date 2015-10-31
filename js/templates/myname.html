@@ -1,0 +1,8 @@
+<div class="editable">
+	<a class="add-name" ng-show="!edit && !name" ng-click="toggleEdit(true)" href="#">Add name</a>
+	<h1 class="output" ng-show="!edit" ng-click="toggleEdit(true)">{{name}}</h1>
+	<div class="input" ng-show="edit" >
+		<input class="large" type="text" ng-model="name" autofocus />
+		<a class="large confirm" ng-click="toggleEdit(false)" href="#"><i class="fa fa-check-circle "></i></a>
+	</div>
+</div>

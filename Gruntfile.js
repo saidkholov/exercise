@@ -6,8 +6,18 @@ module.exports = function(grunt) {
 	      options: {
 	        port: 8800,
 	        hostname: 'localhost',
-	        base: '.'
-	      }
+	        base: '.',
+          middleware: function (connect, options, middlewares) {
+              // inject a custom middleware 
+              middlewares.unshift(function (req, res, next) {
+                  res.setHeader('Access-Control-Allow-Origin', '*');
+                  res.setHeader('Access-Control-Allow-Methods', '*');
+                  return next();
+              });
+
+              return middlewares;
+          }
+        }
 	    }
 	  },
     concat : {
@@ -16,8 +26,7 @@ module.exports = function(grunt) {
         sourceMap : true,
       },
       dist: {
-        src : ["js/**/*.js",
-              "!js/jquery.min.js"],
+        src : ["js/index.js","js/**/*.js"],
         dest : "tmp/<%=pkg.name %>.js"
       },
     },
@@ -46,7 +55,6 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        banner: '*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
         sourceMap : true,
         sourceMapIncludeSources : true,
         sourceMapIn : '<%= concat.dist.dest %>.map'

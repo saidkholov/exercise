@@ -1,0 +1,47 @@
+.editable {
+	p {
+		margin: 0px;
+		font-weight: bold;
+	}
+	.output {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.input {
+		position: relative;
+		input {
+			&.large {
+				font-size: em(35px);
+			}
+			color: #5f5f5f;
+			width: 100%;
+			line-height: 20px;
+		}
+		a.confirm {
+			position: absolute;
+			right: 5px;
+			top: 4px;
+			&.large {
+				top: 11px;
+				i {
+					font-size: 20px;
+				}
+			}
+			i {
+				font-size: 16px;
+				color: #e6e6e6;
+			}
+		}
+	}
+	.predictions ul {
+		position: absolute;
+	    width: 214%;
+	    background: #fff;
+	}
+}
+#map {
+    width: 100%;
+    height: 267px;
+ }
+
