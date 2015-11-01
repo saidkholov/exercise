@@ -2,12 +2,19 @@ angular.module('services', []);
 angular.module('directives', []);
 
 angular.module('toptal', ['directives', 'services'])
-	.controller('ToptalController',['$scope', 'fileReader', function($scope, fileReader) {
-		$scope.thing = "asd";
+	.controller('ToptalController',['$scope', '$http', 'fileReader', function($scope, $http, fileReader) {
+
+		$scope.toggleMenu = function(bool) {
+			$scope.showMenu = bool;
+		};
+
 		$scope.uploadFile = function(el, target) {
 			fileReader.readAsDataUrl(el.files[0], $scope)
 				.then(function(result) {
 				  $scope[target] = result;
 				});
 		};
+
+		// Get skills
+		var promise = $http.get('/api/v1/movies/avengers');
 }]);

@@ -39,10 +39,10 @@
 				<section class="bottom row">
 					<nav class="navigation">
 						<div class="mobile-menu-button">
-							<a href="#"><i class="fa fa-bars"></i></a>
+							<a href="#" ng-click="toggleMenu(true)"><i class="fa fa-bars"></i></a>
 						</div>
-						<ul>
-							<li class="mobile-up-hidden close"><a href="#"><i class="fa fa-times-circle"></i></a></li>
+						<ul ng-show="showMenu">
+							<li class="mobile-up-hidden close"><a ng-click="toggleMenu(false)" href="#"><i class="fa fa-times-circle"></i></a></li>
 							<li class="mobile-up-hidden"><a href="#">login</a></li>
 							<li class="mobile-up-hidden"><a href="#">developer sing up</a></li>
 							<li class="mobile-up-hidden"><a href="#">company sing up</a></li>
@@ -68,7 +68,7 @@
 			<div class="container">
 				<header class="content-header">
 					<div class="profile-image">
-						<label class="edit-link" href="#">
+						<label class="edit-link">
 							<span ng-show="!imageSrc">Add profile Image...</span>
 							<input type="file" onchange="angular.element(this).scope().uploadFile(this, 'imageSrc')" />
 							<img ng-show="imageSrc" src="{{imageSrc}}">
@@ -90,7 +90,7 @@
 								<span>(You can only publish a completed profile)</span>
 							</div>
 						</div>
-						<label class="resume" href="#" >
+						<label class="resume">
 							<span class="primary-button"><i class="fa fa-upload"></i> UPLOAD RESUME</span>
 							<input type="file" />
 						</label>
