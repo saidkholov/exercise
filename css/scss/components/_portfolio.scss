@@ -1,0 +1,31 @@
+myportfolio {
+	display: block;
+	.portfolio {
+		height: 267px;
+	    color: #fff;
+	    &.active{
+	    	ul.project-list {
+	    		padding: 0px;
+	    	}
+	    }
+		ul.project-list {
+			margin-top: 10px;
+			padding-left: 20px;
+			text-align: left;
+			li.hasContent {
+				list-style-type: circle;
+				
+			}
+			li {
+				.project-name {
+					font-weight: bold;
+				}
+			}
+			input {
+				float: left;
+				width: 50%;
+			}
+
+		}
+	}
+}

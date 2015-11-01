@@ -39,7 +39,53 @@
 	    width: 214%;
 	    background: #fff;
 	}
+
+	// Skills template
+	ul.skills {
+		display: block;
+		li {
+			position: relative;
+			text-transform: uppercase;
+			display: inline-block;
+			margin: 3px 5px 3px 0;
+			
+			&.strong {
+				background: #000;
+			}
+			&.normal {
+				background: #5c5c5c;
+			}
+			&.weak {
+				a.removeSkill {
+					i {
+						color: #000;
+					}
+				}
+				background: #a1a1a1;
+			}
+			a.removeSkill {
+				display: inline-block;
+				padding: 2px 15px 2px 9px;
+				color: #fff;
+				&:hover {
+					text-decoration: none;
+					i {
+						display: inline;
+					}
+				}
+				i {
+					position: absolute;
+					right: 2px;
+					top: 5px;
+					display: none;
+					color: #a1a1a1;
+				}
+				
+			}
+		}
+	}
 }
+
 #map {
     width: 100%;
     height: 267px;

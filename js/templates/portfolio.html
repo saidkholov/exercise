@@ -1,0 +1,18 @@
+<a class="portfolio" ng-class="{active: edit}" ng-click="toggleEdit($event, true)">
+	<div class="title">Portfolio</div>
+	<div ng-show="!edit && !skills" class="content">Add content...</div>
+	<div ng-show="skills" class="skills"><em>{{skills}}</em></div>
+	<ul class="project-list" ng-show="skills || edit">
+		<li ng-repeat="project in projects" ng-class="{hasContent: project.name}" >
+			<span ng-show="edit">
+				<input type="text" placeholder="Project Name" ng-model="projects[$index].name" /> 
+				<input type="text" placeholder="Skill used" ng-model="projects[$index].skill" / >
+			</span>
+			<span ng-show="!edit && project.name ">
+				<span class="project-name">{{projects[$index].name}}</span>,
+				<span class="skill-used">{{project.skill}}</span>
+			</span>
+		</li>
+	</ul>
+	<span class="confirm" href="#" ng-show="edit" ng-click="toggleEdit($event, false)"><i class="fa fa-check-circle"></i></span>
+</a>

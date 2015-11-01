@@ -68,9 +68,11 @@
 			<div class="container">
 				<header class="content-header">
 					<div class="profile-image">
-						<a class="edit-link" href="#">
-							<span>Add profile Image...</span>
-						</a>
+						<label class="edit-link" href="#">
+							<span ng-show="!imageSrc">Add profile Image...</span>
+							<input type="file" onchange="angular.element(this).scope().uploadFile(this, 'imageSrc')" />
+							<img ng-show="imageSrc" src="{{imageSrc}}">
+						</label>
 					</div>
 					<div class="profile-info">
 						<div class="row">
@@ -88,30 +90,22 @@
 								<span>(You can only publish a completed profile)</span>
 							</div>
 						</div>
-						<a class="resume" href="#">
+						<label class="resume" href="#" >
 							<span class="primary-button"><i class="fa fa-upload"></i> UPLOAD RESUME</span>
-						</a>
+							<input type="file" />
+						</label>
 					</div>
 				</header>
 				<section class="about">
 					<ul>
 						<li class="block">
-							<a href="#">
-								<div class="title">Portfolio</div>
-								<div class="content">Add content...</div>
-							</a>
+							<myportfolio></myportfolio>
 						</li>
 						<li class="block">
-							<a href="#">
-								<div class="title">Experience</div>
-								<div class="content">Add content...</div>
-							</a>
+							<mycontent title="Experience" class="mycontent"></mycontent>
 						</li>
 						<li class="block">
-							<a href="#">
-								<div class="title">Sample code and algorithms</div>
-								<div class="content">Add content...</div>
-							</a>
+							<mycontent title="Sample code and algorithms" class="mycontent"></mycontent>
 						</li>
 						<li class="block">
 							<a href="#" class="half-block">
@@ -120,26 +114,15 @@
 									Full-Time
 								</div>
 							</a>
-							<a href="#" class="half-block">
-								<div class="title">Preferred environment</div>
-								<div class="content">
-									Add content...
-								</div>
-							</a>
+							<mycontent title="Preferred environment" class="mycontent half-block"></mycontent>
 						</li>
 					</ul>
 					<ul>
 						<li class="block quote">
-							<a href="#">
-								<div class="title">The most amazing...</div>
-								<div class="content">Add content...</div>
-							</a>
+							<mycontent title="The most amazing..." class="mycontent"></mycontent>
 						</li>
 						<li class="block quote">
-							<a href="#">
-								<div class="title">In clients I lok for</div>
-								<div class="content">Add content...</div>
-							</a>
+							<mycontent title="In clients I look for..." class="mycontent"></mycontent>
 						</li>
 						<li class="block">
 							<a href="#">
@@ -154,33 +137,22 @@
 							</a>
 						</li>
 						<li class="block quote">
-							<a href="#">
-								<div class="title">Note</div>
-								<div class="content">Add content...</div>
-							</a>
+							<mycontent title="Note" class="mycontent"></mycontent>
 						</li>
 					</ul>
 					<div class="block-divider">Let me introduce myself...</div>
 					<ul>
 						<li class="block">
-							<a href="#">
-								<div class="content">Add content...</div>
-							</a>
+							<mycontent title="" class="mycontent"></mycontent>
 						</li>
 						<li class="block">
-							<a href="#">
-								<div class="content">Add content...</div>
-							</a>
+							<mycontent title="" class="mycontent"></mycontent>
 						</li>
 						<li class="block">
-							<a href="#">
-								<div class="content">Add content...</div>
-							</a>
+							<mycontent title="" class="mycontent"></mycontent>
 						</li>
 						<li class="block">
-							<a href="#">
-								<div class="content">Add content...</div>
-							</a>
+							<mycontent title="" class="mycontent"></mycontent>
 						</li>
 					</ul>
 					<section class="qa-form">

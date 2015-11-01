@@ -1,9 +1,17 @@
 <div class="editable">
-	<a class="add-skill" ng-show="!edit && !skill" ng-click="toggleEdit(true)" href="#">Add skill <i class="fa fa-plus-circle"></i></a>
-	<p class="output" ng-show="!edit" ng-click="toggleEdit(true)">{{skill}}</p>
+	<ul class="skills output" ng-show="skills">
+		<li ng-repeat="skill in skills" class="{{skill.strength}}"><a class="removeSkill" href="#" ng-click="removeSkill($index)">{{skill.name}} <i class="fa fa-times-circle"></i></a></li>
+	</ul>
+	<a class="add-skill" ng-show="!edit" ng-click="toggleEdit(true)" href="#">Add skill <i class="fa fa-plus-circle"></i></a>
 	<div class="input" ng-show="edit" >
-		<input type="text" ng-model="name" autofocus />
-		<span class="dropDown"></span>
+		<input type="text" ng-model="new_skill" autofocus />
+		<div class="custom-select">
+			<select ng-model="strength">
+				<option value="strong">strong</option>
+				<option value="normal">normal</option>
+				<option value="weak">weak</option>
+			</select>
+		</div>
 		<a class="confirm" ng-click="toggleEdit(false)" href="#"><i class="fa fa-check-circle "></i></a>
 	</div>
 </div>

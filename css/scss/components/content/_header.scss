@@ -1,43 +1,57 @@
+%upload-label {
+	label {
+			color: #4f4f4f;
+			&:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+			input {
+				visibility: hidden;
+				position: absolute;
+			}
+		}
+}
+
 header.content-header {
 	min-height: 236px;
 	display: table;
 	width: 100%;
 	.profile-image {
 		@include span-columns(4, table);
-
 		text-align: center;
 		background: #b8b8b8;
 		vertical-align: middle;
-		a {
-			color: #4f4f4f;
-		}
+		@extend %upload-label;
 	}
 	.profile-info {
 		@include span-columns(8, table);
 		background-color: #e6e6e6;
 		padding: 20px;
 		position: relative;
+		@extend %upload-label;
 		.basic-info {
 			@include span-columns(6);
-			a {
-				display: inline-block;
-				color: #5f5f5f;
-				font-size: em(16px);
-				&.add-name {
-					line-height: 32px;
-					margin-bottom: 10px;
-					font-size: em(45px);
-				}
-				&.add-skill {
-					i {
-						display: none;
-						color: #5f5f5f;
+			.editable {
+				> a {
+					display: inline-block;
+					color: #5f5f5f;
+					font-size: em(16px);
+					&.add-name {
+						line-height: 32px;
+						margin-bottom: 10px;
+						font-size: em(45px);
 					}
-					&:hover {
-						text-decoration: none;
-						border: 1px solid #ccc;
+					&.add-skill {
 						i {
-							display: initial;
+							display: none;
+							color: #5f5f5f;
+						}
+						&:hover {
+							text-decoration: none;
+							border: 1px solid #ccc;
+							i {
+								display: initial;
+							}
 						}
 					}
 				}

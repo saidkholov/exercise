@@ -1,0 +1,7 @@
+<a class="text" ng-class="{active : edit}" ng-click="toggleEdit($event, true)">
+	<div class="title">{{title}}</div>
+	<div ng-show="!edit && !content" class="content">Add content...</div>
+	<p ng-show="content && !edit">{{content}}</p>
+	<textarea ng-show="edit" ng-model="content"></textarea>
+	<span class="confirm" href="#" ng-show="edit" ng-click="toggleEdit($event, false)"><i class="fa fa-check-circle"></i></span>
+</a>
