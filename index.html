@@ -41,13 +41,12 @@
 						<div class="mobile-menu-button">
 							<a href="#" ng-click="toggleMenu(true)"><i class="fa fa-bars"></i></a>
 						</div>
-						<ul ng-show="showMenu">
+						<ul ng-show="showMenu || !isMobile">
 							<li class="mobile-up-hidden close"><a ng-click="toggleMenu(false)" href="#"><i class="fa fa-times-circle"></i></a></li>
 							<li class="mobile-up-hidden"><a href="#">login</a></li>
 							<li class="mobile-up-hidden"><a href="#">developer sing up</a></li>
 							<li class="mobile-up-hidden"><a href="#">company sing up</a></li>
 							<li class="mobile-up-hidden divider"></li>
-
 							<li><a href="#">what</a></li>
 							<li><a href="#">why</a></li>
 							<li><a href="#">how</a></li>
@@ -71,7 +70,7 @@
 						<label class="edit-link">
 							<span ng-show="!imageSrc">Add profile Image...</span>
 							<input type="file" onchange="angular.element(this).scope().uploadFile(this, 'imageSrc')" />
-							<img ng-show="imageSrc" src="{{imageSrc}}">
+							<img ng-show="imageSrc" ng-src="{{imageSrc}}">
 						</label>
 					</div>
 					<div class="profile-info">

@@ -8,6 +8,10 @@ angular.module('toptal', ['directives', 'services'])
 			$scope.showMenu = bool;
 		};
 
+		if( window.width < 640) {
+			$scope.isMobile = true;
+		}
+
 		$scope.uploadFile = function(el, target) {
 			fileReader.readAsDataUrl(el.files[0], $scope)
 				.then(function(result) {
