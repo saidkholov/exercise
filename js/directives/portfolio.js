@@ -9,7 +9,7 @@ angular.module('directives')
 	    	var projects = [];
 	    	for (var i = 0; i < 7; i++) {
 	    		projects[i] = {name : "", skill: ""};
-	    	};
+	    	}
 	    	scope.projects = projects;
 
 	    	scope.toggleEdit = function(e, bool) {
@@ -21,7 +21,7 @@ angular.module('directives')
 		    			if (scope.projects[i].skill) {
 		    				skills = skills.concat(scope.projects[i].skill.split(' '));
 		    			}
-		    		};
+		    		}
 
 		    		skills = skills.filter(function (value, index, self) {
 					    return self.indexOf(value) === index;

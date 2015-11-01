@@ -19,12 +19,13 @@ angular.module('directives')
 		    				name : newSkills[i],
 		    				strength : scope.strength
 		    			});
-		    		};
+		    		}
 	    		}
-	    	}
+	    	};
+	    	
 	    	scope.removeSkill = function(index) {
 	    		scope.skills.splice(index, 1);
-	    	}
+	    	};
 	    }
 	  };
 	});

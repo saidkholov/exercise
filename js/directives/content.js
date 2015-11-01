@@ -9,7 +9,7 @@ angular.module('directives')
 	    	scope.toggleEdit = function(e, bool) {
 	    		e.stopPropagation();
 	    		scope.edit = bool;
-	    	}
+	    	};
 	    }
 	  };
 	});

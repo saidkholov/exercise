@@ -7,7 +7,7 @@ angular.module('directives')
 	    link : function(scope, element, attrs) {
 	    	scope.toggleEdit = function(bool) {
 	    		scope.edit = bool;
-	    	}
+	    	};
 	    }
 	  };
 	});
