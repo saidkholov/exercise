@@ -10,6 +10,14 @@ section.skills {
 		@include span-columns(3);
 		li {
 			padding-left: 15px;
+			a {
+				color: #000;
+				&:hover {
+					text-decoration: none;
+					background: #000;
+					color: #fff;
+				}
+			}
 			&.letter {
 				float: left;
 				font-weight: bold;

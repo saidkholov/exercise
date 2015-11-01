@@ -162,37 +162,8 @@
 				</section>
 				<section class="skills row">
 					<h3><strong>Top skills on toptal</strong></h3>
-					<ul class="skills-column">
-						<li class="letter">.</li>
-						<li>.Net Programmers</li>
-						<li>3d Max engineers</li>
-						<li class="letter">A</li>
-						<li >Administrative assistants</li>
-						<li >AJAX Programmers</li>
-					</ul>
-					<ul class="skills-column">
-						<li class="letter">.</li>
-						<li>.Net Programmers</li>
-						<li>3d Max engineers</li>
-						<li class="letter">A</li>
-						<li >Administrative assistants</li>
-						<li >AJAX Programmers</li>
-					</ul>
-					<ul class="skills-column">
-						<li class="letter">.</li>
-						<li>.Net Programmers</li>
-						<li>3d Max engineers</li>
-						<li class="letter">A</li>
-						<li >Administrative assistants</li>
-						<li >AJAX Programmers</li>
-					</ul>
-					<ul class="skills-column">
-						<li class="letter">.</li>
-						<li>.Net Programmers</li>
-						<li>3d Max engineers</li>
-						<li class="letter">A</li>
-						<li >Administrative assistants</li>
-						<li >AJAX Programmers</li>
+					<ul class="skills-column" ng-repeat="skills in topSkills">
+						<li ng-repeat="skill in skills" ng-class="{letter : skill.length < 2}"><a href="#">{{skill}}</a></li>
 					</ul>
 				</section>
 			</div>

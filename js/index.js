@@ -16,5 +16,10 @@ angular.module('toptal', ['directives', 'services'])
 		};
 
 		// Get skills
-		var promise = $http.get('/api/v1/movies/avengers');
+		var promise = $http.get('/mock/skills.json');
+		promise.then(function(payload) {
+			if (payload.statusText === "OK") {
+				$scope.topSkills = payload.data.skills;
+			}
+		});
 }]);
