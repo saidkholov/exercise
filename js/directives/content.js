@@ -8,6 +8,7 @@ angular.module('directives')
 	    	scope.title = attrs.title;
 	    	scope.toggleEdit = function(e, bool) {
 	    		e.stopPropagation();
+	    		e.preventDefault();
 	    		scope.edit = bool;
 	    	};
 	    }

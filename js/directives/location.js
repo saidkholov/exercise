@@ -3,13 +3,10 @@ angular.module('directives')
 	  return {
 	  	restrict : 'E',
 	    templateUrl: 'js/templates/location.html',
-	    link : function(scope, element, attrs) {
-	    	scope.toggleEdit = function(bool) {
-	    		scope.edit = bool;
-	    	};
-	    },
-
 	    controller : ['$scope', '$http', function($scope, $http) {
+	    	$scope.toggleEdit = function(bool) {
+	    		$scope.edit = bool;
+	    	};
 	    	$scope.getAddress = function() {
 	    		params = 'key=AIzaSyDGY1xAY1rbmnefcMw0-7MRH3B8rHycY3s&input='+ $scope.location;
 	    		$http.get('https://maps.googleapis.com/maps/api/place/autocomplete/json?' + params)

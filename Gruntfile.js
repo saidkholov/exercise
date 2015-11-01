@@ -6,17 +6,7 @@ module.exports = function(grunt) {
 	      options: {
 	        port: 8800,
 	        hostname: 'localhost',
-	        base: '.',
-          middleware: function (connect, options, middlewares) {
-              // inject a custom middleware 
-              middlewares.unshift(function (req, res, next) {
-                  res.setHeader('Access-Control-Allow-Origin', '*');
-                  res.setHeader('Access-Control-Allow-Methods', '*');
-                  return next();
-              });
-
-              return middlewares;
-          }
+	        base: '.'
         }
 	    }
 	  },
@@ -26,7 +16,7 @@ module.exports = function(grunt) {
         sourceMap : true,
       },
       dist: {
-        src : ["js/index.js","js/**/*.js"],
+        src : ["js/app.js","js/**/*.js"],
         dest : "tmp/<%=pkg.name %>.js"
       },
     },
@@ -42,7 +32,7 @@ module.exports = function(grunt) {
 	    livereload: true,
 	  },
 	  html : {
-	  	files: ['*.html']
+	  	files: ['index.html', 'js/templates/**.html']
 	  },
     css : {
       files: ['css/scss/**/*.scss'],
