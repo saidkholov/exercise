@@ -15,19 +15,18 @@ angular.module('directives')
 	    	$scope.toggleEdit = function(e, bool) {
 	    		e.stopPropagation();
 	    		$scope.edit = bool;
-	    		if ($scope.edit) {
-		    		var skills = [];
-		    		for (var i = 0; i < $scope.projects.length; i++) {
-		    			if ($scope.projects[i].skill) {
-		    				skills = skills.concat($scope.projects[i].skill.split(' '));
-		    			}
-		    		}
+	    		
+	    		var skills = [];
+	    		for (var i = 0; i < $scope.projects.length; i++) {
+	    			if ($scope.projects[i].skill) {
+	    				skills = skills.concat($scope.projects[i].skill.split(' '));
+	    			}
+	    		}
 
-		    		skills = skills.filter(function (value, index, self) {
-					    return self.indexOf(value) === index;
-					});
-		    		$scope.skills = skills.join(", ");
-		    	}
+	    		skills = skills.filter(function (value, index, self) {
+				    return self.indexOf(value) === index;
+				});
+	    		$scope.skills = skills.join(", ");
 	    	};
 	    }]
 	  };
