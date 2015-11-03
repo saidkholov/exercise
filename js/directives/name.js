@@ -3,7 +3,6 @@ angular.module('directives')
 		return {
 			restrict : 'E',
 			scope : {},
-			transclude : true,
 			templateUrl: 'js/templates/myname.html',
 			controller : ['$scope', function($scope){
 				$scope.toggleEdit = function(bool) {
