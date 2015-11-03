@@ -2,7 +2,7 @@
 	<a ng-show="!edit && !name" ng-click="toggleEdit(true)" href="#">Add languages</a>
 	<p class="output" ng-show="!edit" ng-click="toggleEdit(true)">{{name}}</p>
 	<div class="input" ng-show="edit" >
-		<input type="text" ng-model="name" autofocus />
+		<input type="text" ng-model="name" myautofocus="edit" />
 		<a class="confirm" ng-click="toggleEdit(false)" href="#"><i class="fa fa-check-circle"></i></a>
 	</div>
 </div>

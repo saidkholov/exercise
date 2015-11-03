@@ -65,3 +65,9 @@ $ grunt test
 ```
 
 Lints all Javascript.
+
+P.S
+
+If you need to add CORS to chrome here is an [extension link](https://chrome.google.com/webstore/category/apps?hl=en), otherwise CORS requests(ex. places api) won't work.
+
+

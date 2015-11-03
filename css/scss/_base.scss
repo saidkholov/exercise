@@ -60,7 +60,7 @@ a {
 		text-decoration: underline;
 	}
 }
-input {
+input, textarea {
 	&:focus {
 		outline: 0px;
 	}

@@ -1,6 +1,9 @@
 %upload-label {
 	label {
 			color: #4f4f4f;
+			overflow: hidden;
+			display: block;
+			position: relative;
 			&:hover {
 				cursor: pointer;
 				text-decoration: underline;
@@ -24,6 +27,7 @@ header.content-header {
 		@extend %upload-label;
 	}
 	.profile-info {
+		overflow: hidden;
 		@include span-columns(8, table);
 		background-color: #e6e6e6;
 		padding: 20px;
@@ -124,13 +128,22 @@ header.content-header {
 	header.content-header {
 		.profile-image {
 			@include span-columns(12);
-			a {
+			.edit-link {
 				padding: 40px 0;
 				display: block;
+				&.hasImage {
+					padding: 0px;
+				}
 			}
 		}
 		.profile-info {
 			@include span-columns(12);
+			.profile-actions {
+				margin-bottom: 20px;
+			}
+			.resume {
+				padding: 10px;
+			}
 		}
 	}
 }

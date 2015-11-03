@@ -8,8 +8,8 @@ angular.module('toptal', ['directives', 'services'])
 			$scope.showMenu = bool;
 		};
 
-		if( window.width < 640) {
-			$scope.isMobile = true;
+		if( window.innerWidth > 640) {
+			$scope.showMenu = true;
 		}
 
 		$scope.uploadFile = function(el, target) {

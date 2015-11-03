@@ -3,6 +3,7 @@
 $border-radius: 4px;
 
 %button {
+	display: inline-block;
 	&:hover, &:focus, &:visited, &:link {
 		text-decoration: none;
 	}

@@ -4,7 +4,7 @@
 	</ul>
 	<a class="add-skill" ng-show="!edit" ng-click="toggleEdit(true)" href="#">Add skill <i class="fa fa-plus-circle"></i></a>
 	<div class="input" ng-show="edit" >
-		<input type="text" ng-model="new_skill" autofocus />
+		<input type="text" ng-model="new_skill" myautofocus="edit" />
 		<div class="custom-select">
 			<select ng-model="strength">
 				<option value="strong">strong</option>
