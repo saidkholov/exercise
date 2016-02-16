@@ -1,4 +1,4 @@
-# Toptal Front-end test 
+# Front-end test 
 The purpose if the project is to test applicants front-end coding abilities.
 
 | Requirements        | Tools                              |
